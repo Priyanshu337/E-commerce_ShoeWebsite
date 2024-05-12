@@ -1,16 +1,32 @@
-export const getAllShoesReducer = (state = {}, action) => {
-    switch (action.type) {
-        case 'GET_SHOES_REQUESTS': return {
-            ...state
-        }
-        case 'GET_SHOES_SUCCESS': return {
-            shoes: action.payload
-        }
-        case 'GET_SHOES_FAILURE': return {
-            error: action.payload
-        }
-        default: return state
-    }
-}
+const initialState = {
+    shoes: [],
+    loading: false,
+    error: null
+};
 
-// export default getAllShoesReducer;
+export const getAllShoesReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'GET_SHOES_REQUEST':
+            return {
+                ...state,
+                loading: true
+            };
+        case 'GET_SHOES_SUCCESS':
+            return {
+                ...state,
+                loading: false,
+                shoes: action.payload,
+                error: null
+            };
+        case 'GET_SHOES_FAILED':
+            return {
+                ...state,
+                loading: false,
+                error: action.payload
+            };
+        default:
+            return state;
+    }
+};
+
+export default getAllShoesReducer;
