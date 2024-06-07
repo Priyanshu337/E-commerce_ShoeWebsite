@@ -12,6 +12,6 @@ const shoesSchema = new mongoose.Schema({
         timeStamps: true,
     })
 
-const shoesModel = mongoose.model('shoesModels', shoesSchema);
+const shoesModel = mongoose.model('dash-shoe-datas', shoesSchema);
 
 module.exports = shoesModel;

@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
 
 function App() {

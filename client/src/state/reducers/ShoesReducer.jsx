@@ -4,7 +4,7 @@ const initialState = {
     error: null
 };
 
-export const getAllShoesReducer = (state = initialState, action) => {
+export const getShoesReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'GET_SHOES_REQUEST':
             return {
@@ -29,4 +29,4 @@ export const getAllShoesReducer = (state = initialState, action) => {
     }
 };
 
-export default getAllShoesReducer;
+export default getShoesReducer;

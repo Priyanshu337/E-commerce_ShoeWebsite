@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import { getAllShoesReducer } from "./reducers/ShoesReducer";
+import { getShoesReducer } from "./reducers/ShoesReducer";
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-    allShoes: getAllShoesReducer, // Assuming `getAllShoesReducer` is your reducer for fetching all shoes
+    allShoes: getShoesReducer, // Assuming `getShoesReducer` is your reducer for fetching all shoes
 });
 
 const initialState = {};

@@ -19,7 +19,7 @@ app.listen(PORT, () => console.log(`Port started on: ${PORT}`));
 
 //setting up db
 
-mongoose.connect('mongodb+srv://admin0104:Admin%40123@cape-mongodb.0xium03.mongodb.net/test',
+mongoose.connect('mongodb+srv://priyanshuchoudhary0104:Priyanshu0209@cape-mongodb.0xium03.mongodb.net/test',
     { useNewUrlParser: true });
 const db = mongoose.connection;
 
