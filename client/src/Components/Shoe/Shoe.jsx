@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import './Shoe.css'
+import { addToCart } from '../../actions/CartAction'
 
 export default function Shoe({ shoe }) {
     const [Quantity, setQuantity] = useState(1)
@@ -10,8 +12,12 @@ export default function Shoe({ shoe }) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const dispatch = useDispatch()
+    function addtocart() {
+        dispatch(addToCart(shoe, Quantity, Size))
+    }
     return (
-        <div className="shoe-box" key={shoe._id}>
+        <div className="shoe-box " key={shoe._id}>
 
             <div onClick={handleShow} className='shoe'>
                 <h1>{shoe.name}</h1>
@@ -19,7 +25,7 @@ export default function Shoe({ shoe }) {
             </div>
 
             <div className="flex-container">
-                <div className='w-100'>
+                <div className='w-100 '>
                     <p>Size</p>
                     <select className='form-control' value={Size} onChange={(e) => { setSize(e.target.value) }}>
                         {shoe.size.map(size => {
@@ -44,7 +50,7 @@ export default function Shoe({ shoe }) {
                 </div>
 
                 <div className='m-1 w-100' >
-                    <button className='cart-btn'> ADD TO CART</button>
+                    <button className='cart-btn' onClick={addtocart}> ADD TO CART</button>
                 </div>
             </div>
 

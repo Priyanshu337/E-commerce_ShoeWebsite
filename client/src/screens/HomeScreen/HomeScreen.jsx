@@ -26,7 +26,7 @@ export default function HomeScreen() {
             <h1>Something Went Wrong</h1>
           ) : (
             shoeState.shoes.map(shoe => {
-              return <div className="col-md-4" style={{ width: "550px", height: "650px", boxShadow: '0 .15rem 1.75rem 0 rgba(0, 0, 0, .15)', margin: '20px auto' }}>
+              return <div className="col-md-3" style={{ borderRadius: '15px', width: "550px", height: "650px", boxShadow: '0 .15rem 1.75rem 0 rgba(0, 0, 0, .15)', padding: '10px', margin: '20px auto' }}>
                 <div>
                   <Shoe shoe={shoe} />
                 </div>

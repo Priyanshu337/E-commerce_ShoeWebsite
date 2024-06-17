@@ -1,8 +1,28 @@
 .shoe-price {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .cart-btn {
     background-color: green;
+    margin: 10px;
 }
+
+.flex-container {
+    margin: 10px
+}
+
+
+
+/* send krenge action me details of pizza when add to cart button clicked 
+- then usme ek action type bhi send krenge as addtocart 
+- fhir wha logic hoga to cart me item ki setils declare krenge usestate se 
+- fhir wo db par update krenge live rhega to har bar login krenge to wo dikhayega iske 
+liye use id leni padegi or uske db collecrtion name {ShoeCart}
+
+hoga or usek andar userid,
+shoe name,
+img,
+size,
+price,
+etc - fhir cart compt me jo bhi item db me hogi or uska total hoga. */

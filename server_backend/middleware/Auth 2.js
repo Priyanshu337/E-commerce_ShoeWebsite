@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-
-function auth(req, res, next) {
+function Auth(req, res, next) {
   try {
     const token = req.cookies.token;    // Access the token from the cookies
 
@@ -11,15 +10,10 @@ function auth(req, res, next) {
 
     req.user = verified.user;
 
-    next();             // i used this because of this it will move on to next functions in customer router.
+    next();             // i used this because it will move on to next functions in customer router.
   } catch (err) {
     console.error(err);
     res.status(401).json({ errorMessage: "Unauthorized" });
   }
 }
-module.exports = auth;
-
-
-
-
-
+module.exports = Auth;
